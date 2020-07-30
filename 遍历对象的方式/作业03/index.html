@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //制作一个简易计算器
+        var text = '欢迎使用简易计算器：\n 1.加法运算：\n 2.减法运算\n 3.乘法运算\n 4.除法运算\n 5.退出\n';
+        var sum = null;
+        
+        while(1){
+            var userInp = prompt(text+'请输入您的选项：');
+            if(userInp == 5){
+                break;
+            }
+            var num1 = prompt('第一个数：');
+            var num2 = prompt('第二个数：');
+            switch(userInp){
+                case '1': 
+                    sum = parseInt(num1)+parseInt(num2);
+                    break;
+                case '2': 
+                    sum = parseInt(num1)-parseInt(num2);
+                    break;
+                case '3': 
+                    sum = parseInt(num1)*parseInt(num2);
+                    break;
+                case '4': 
+                    sum = parseInt(num1)/parseInt(num2);
+                    break;
+            }
+            
+            
+            alert('计算的结果是：'+sum);
+
+        }
+    </script>
+</body>
+</html>

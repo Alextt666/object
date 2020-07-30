@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //for..in 语句用于对数组或者对象的属性 进行循环操作 主要是用于对象；
+
+        var obj = {
+            name: '小天',
+            age: 18,
+            sex: '男',
+            fn1 : function(){}
+        }
+
+        // for .. in 的语句规则是：
+
+        // for (变量 in 对象) {
+
+        // }
+
+        for (var k in obj){         //var k 不需要赋值
+            console.log(k);         //变量k 输出 得到的是属性名
+            console.log(obj[k]);    //obj[k] 输出 得到的是属性值    一定要用[] 且不需要加引号；
+        }
+
+        //使用 for..in 变量名一般选用k  或者    key ;
+
+    </script>
+</body>
+
+</html>

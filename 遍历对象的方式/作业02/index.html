@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //作业 1 创建一个电脑对象， 有颜色 重量 品牌  型号  ， 可以看电影，听音乐 打游戏 和敲代码；
+        function computer (color,weight,brand,type){
+            this.color = color
+            this.weight = weight
+            this.brand = brand
+            this.type = type
+            this.WatchFilm = function (filmName){
+                console.log(filmName);
+            }
+            this.Listen = function(music){
+                console.log(music);
+            }
+            this.PlayGame = function(game){
+                console.log(game);
+            }
+            this.Code = function(code){
+                console.log(code);
+            }
+        };
+        var myComputer = new computer('black','0.5kg','dell','insiprie');
+        console.log(myComputer)
+
+        //作业2 创建一个按钮对象 包含宽度 高度 背景颜色 和点击行为
+        var button = {
+            width: '156px',
+            height : '256px',
+            bkg : 'red',
+            onclick : function (){
+                alert('hi');
+            }
+        }
+        console.log(button);
+        console.log(typeof button);
+
+        //作业3 创建一个车的对象 有重量 颜色    牌子    可以载人    拉货    和耕田
+
+        var car = new Object();
+        car.weight = '1T';
+        car.color = 'red';
+        car.brand = 'aoto';
+        car.take = function(){
+            console.log('我可以载人')
+        }
+        car.push = function(){
+            console.log('我可以拉货');
+        }
+        car.work = function(){
+            console.log('我可以耕田');
+        }
+        console.log(car);
+    </script>
+</body>
+</html>

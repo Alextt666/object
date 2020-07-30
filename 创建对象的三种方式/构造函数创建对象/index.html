@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 为什么需要构造函数 来创建对象： 因为前两种方式 一次只能创建一个对象；
+
+        // 若是通过前两种方式创建对象   一次创建一个对象 里面有很多属性和方法相同 创建多个时 造成大量重复
+        // 因此我们可以利用函数的方法 重复这些相同的代码部分 我们把这个函数称为     构造函数
+        // 又因为这个函数不一样， 里面封装的不是代码 而是对象
+        // 构造函数就是把我们对象里面一些相同的属性和方法抽象出来封装到函数里面
+
+
+
+        //通过构造函数 创建对象
+        //构造函数的语法格式
+
+      /*   function 构造函数名(){
+            this.属性 = 值；
+            this.方法 = function(){}
+        };
+        new 构造函数名(); //调用一定要加new； */
+
+        //写一个 关于四大天王的 构造函数   相同属性有： 姓名    年龄    性别    
+
+        function Star(name,age,sex){            //构造函数要和普通函数有所区分 所以一般首字母大写
+            this.name = name 
+            this.age = age 
+            this.sex = sex
+            this.sing = function(song){
+                console.log(song);
+            }
+        };
+        var ldh = new Star('刘德华',18,'男');//创建一个变量来保存构造的对象
+        console.log(ldh);
+        ldh.sing('冰雨'); 
+
+        var zxy = new Star('张学友',19,'男');
+        zxy.sing('吻别');
+
+        //构造函数不需要return就可以返回结果
+        //调用构造函数 必须使用new
+        //只要调用了new Star()构造函数 就创建了一个对象 例如上面的ldh{} zxy{}；
+        //我们的属性方法前面 必须用this来 指向指定的目标 （当前的）；
+
+
+
+        // 利用构造函数创建对象的过程 称为 ：           对象的实例化
+
+
+        // 练习  用构造函数创建两个 对象    包含有： 姓名（name） 类型属性（type）  血量属性（blood）   攻击方式（attack）
+        function Hero(name,type,blood){
+                this.name = name
+                this.type = type 
+                this.blood = blood
+                this.attack = function(way){
+                    console.log(way);
+                };
+        }
+        var hy = new Hero('后裔','射手型','100血量');
+        hy.attack('攻击方式：远程');
+        console.log(hy);
+
+        var lp = new Hero('廉颇','力量型','500血量');
+        lp.attack('攻击方式近战');
+        console.log(lp);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //创建对象的三种方式
+
+        // 1. 利用对象字面量创建对象
+        // var obj = {}; 创建了一个空的对象
+
+        var obj = {
+            name: '张三',
+            age: 18,
+            sex: '男',
+            sayHi: function () {
+                console.log('hy~');
+            }
+        };
+        //注意： (1) 里面的属性或者方法采用键值对的 形式： 键   属性名：    值      属性值
+        //       (2) 多个属性后者方法中间用 逗号分隔开；
+        //       (3)  方法冒号后面跟的是一个匿名函数
+        // 使用对象
+        // (1)调用对象的属性  我们采取  对象名.属性名   其中的小点 .我们理解为 ‘的’  对象‘的’姓名 或者对象 ‘的’性别
+        console.log(obj.name);
+        // (2) 调用属性还有一种方式    对象名['属性名']
+        console.log(obj['age']);
+        // (3)  调用对象的方法 sayHi    对象名.方法名()     不要忘记添加小括号
+        obj.sayHi();
+
+        //练习 1 按照要求写出一个对象
+        var coco = {
+            name :  '可可',
+            type :  '阿拉斯加犬',
+            age  :  '5岁',
+            color:  '棕红色',
+            bark :  function(){
+                console.log('汪汪汪')
+            },
+            shouFilm : function (){
+                console.log('演电影')
+            }
+        };
+        
+    </script>
+</body>
+
+</html>

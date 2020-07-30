@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  new 关键字执行过程
+        // 1.看到 new关键字 构造函数可以在内存中  创建一个空的对象
+        // 2.this 全部指向这个空的对象
+        // 3.执行构造函数里的代码   对this.属性 赋值 给这个空的对象 添加 属性和方法
+        // 4.返回这个对象
+
+
+
+        function Star(name,age,sex){            //构造函数要和普通函数有所区分 所以一般首字母大写
+            this.name = name 
+            this.age = age 
+            this.sex = sex
+            this.sing = function(song){
+                console.log(song);
+            }
+        };
+
+        var ldh = new Star('李德华',18,'男');
+    </script>
+</body>
+</html>
